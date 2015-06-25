@@ -21,6 +21,19 @@ namespace FinalTest.Tests
                 return keyValuePairs.Where(x => x.Value % 2 == 0).Select(x => x.Value);
             }
         }
+
+        public string TexteNombresImpairs
+        {
+            get
+            {
+
+                return keyValuePairs.Where(x => x.Value % 2 == 1).OrderBy(x => x.Value).Select(x => x.Key).Aggregate((x,y)=>x+", "+y);
+            }
+            
+                
+
+            
+        }
     
     }
 }
