@@ -29,6 +29,14 @@ namespace FinalTest.Tests
 
                 return keyValuePairs.Where(x => x.Value % 2 == 1).OrderBy(x => x.Value).Select(x => x.Key).Aggregate((x,y)=>x+", "+y);
             }
+        }
+        public string PremierNombreDontLeTexteContientPlusDe5Caractères
+        {
+            get
+            {
+                return keyValuePairs.First(x => x.Key.Length>5).Key;
+            }
+        }
             
                 
 
@@ -36,4 +44,4 @@ namespace FinalTest.Tests
         }
     
     }
-}
+
