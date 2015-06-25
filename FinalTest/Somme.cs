@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FinalTest
 {
-   public class Somme
+   public class Somme : FinalTest.IOperation
     {
         public bool PeutCalculer(string calcul)
         {
